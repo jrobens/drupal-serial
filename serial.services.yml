@@ -1,0 +1,8 @@
+services:
+  serial.sql_storage:
+    class:  Drupal\serial\SerialSQLStorage
+    arguments: ['@entity_type.manager']
+  serial.event_manager:
+    class: Drupal\serial\Event\SerialEventDispatcherManager
+    arguments:
+      - '@event_dispatcher'

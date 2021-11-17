@@ -1,0 +1,6 @@
+services:
+  cbi_cbid.pre_save_event_subscriber:
+    class: Drupal\cbi_cbid\EventSubscriber\CbiCBIDSubscriber
+    arguments: [ '@entity_type.manager' ]
+    tags:
+      - { name: event_subscriber }
